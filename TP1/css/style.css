@@ -1,0 +1,87 @@
+/*RESET*/
+/* con esto mantenemos el diseño consistente en todos los navegadores */
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* VARIABLES Y ESTILOS GENERALES */
+/* Definimos variables para los colores del sitio, lo que facilita su mantenimiento y cambios futuros */
+:root{
+    --color-fondo:#1a1a2e;
+    --color-header:#16213e;
+    --color-acento:#7F77DD;
+    --color-texto:#ffffff;
+    --color-texto-secundario:#aaaaaa;
+
+    --space-xs: 4px;
+    --space-s: 8px;
+    --space-m: 16px;
+    --space-l: 24px;
+    --space-xl: 32px;
+    --space-xxl: 48px;
+}
+
+/*GENERAL*/
+/*definimos estilos generales para el cuerpo del documento, incluyendo el fondo, el color del texto y la tipografía */
+body {
+    background-color:var(--color-fondo);
+    color:var(--color-texto);
+    font-family:Arial,sans-serif;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/*HEADER*/
+/*definimos estilos para el encabezado del sitio, incluyendo el fondo, el padding y un borde inferior para separar visualmente el encabezado del contenido principal */
+header {
+    background-color:var(--color-header);
+    padding:16px 32px;
+    border-bottom:2px solid var(--color-acento);
+}
+
+header h1 {
+    color:var(--color-acento);
+    font-size: 24px;
+}
+
+/*NAV DENTRO DEL HEADER*/
+/*definimos estilos para la barra de navegación, incluyendo el fondo, el padding y los estilos para los enlaces dentro de la barra de navegación. También se incluyen estilos para el estado hover de los enlaces para mejorar la interactividad del sitio */
+nav {
+    background-color:var(--color-header);
+    padding:8px 32px;
+}
+
+/* Estilos para la lista de navegación, eliminando los puntos de la lista y utilizando flexbox para distribuir los elementos de manera horizontal con un espacio entre ellos */
+nav ul {
+    list-style:none;
+    display:flex;
+    gap:24px;
+}
+
+nav ul li a {
+    color:var(--color-texto);
+    text-decoration:none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color:var(--color-acento);
+}
+
+/*MAIN*/
+main {
+    padding:var(--space-xl);
+}
+
+/*FOOTER*/
+/*definimos estilos para el pie de página, incluyendo el fondo, el color del texto, la alineación del texto, el padding y un borde superior para separar visualmente el pie de página del contenido principal. También se incluye un margen superior para crear espacio entre el contenido principal y el pie de página */
+footer {
+    background-color:var(--color-header);
+    color:var(--color-texto-secundario);
+    text-align:center;
+    padding:var(--space-m) var(--space-l);
+    border-top:2px solid var(--color-acento);
+    margin-top:var(--space-l);
+}
